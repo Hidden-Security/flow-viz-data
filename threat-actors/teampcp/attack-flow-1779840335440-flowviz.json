@@ -1,0 +1,944 @@
+{
+  "id": "a54d6943-9007-4325-8fde-4733803eebe8",
+  "title": "attack-flow-1779840335440",
+  "sourceUrl": "https://www.darkreading.com/application-security/shai-hulud-hackers-teampcp-lucky-skilled",
+  "inputMode": "url",
+  "nodes": [
+    {
+      "id": "actor-1",
+      "type": "malware",
+      "data": {
+        "name": "TeamPCP Threat Actor",
+        "description": "Financially motivated threat actor that emerged in late 2025, targeting open source ecosystems",
+        "source_excerpt": "A financially motivated threat actor, TeamPCP formally emerged in late 2025, making a name exploiting the React2Shell vulnerability as well as targeting misconfigured Docker APIs and Next.js.",
+        "confidence": "high",
+        "type": "malware",
+        "id": "actor-1"
+      },
+      "position": {
+        "x": 1250,
+        "y": 80
+      },
+      "width": 280,
+      "height": 151,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "vuln-1",
+      "type": "vulnerability",
+      "data": {
+        "name": "React2Shell",
+        "description": "Vulnerability exploited by TeamPCP for initial access",
+        "source_excerpt": "TeamPCP formally emerged in late 2025, making a name exploiting the React2Shell vulnerability",
+        "confidence": "high",
+        "type": "vulnerability",
+        "id": "vuln-1"
+      },
+      "position": {
+        "x": 880,
+        "y": 410
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-1",
+      "type": "action",
+      "data": {
+        "name": "Exploit Public-Facing Application",
+        "description": "Exploitation of React2Shell vulnerability and misconfigured Docker APIs",
+        "technique_id": "T1190",
+        "tactic": "Initial Access",
+        "source_excerpt": "making a name exploiting the React2Shell vulnerability as well as targeting misconfigured Docker APIs and Next.js",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-1"
+      },
+      "position": {
+        "x": 1035,
+        "y": 740
+      },
+      "width": 280,
+      "height": 153,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "asset-1",
+      "type": "asset",
+      "data": {
+        "name": "Misconfigured Docker APIs",
+        "description": "Docker APIs with security misconfigurations targeted by TeamPCP",
+        "source_excerpt": "targeting misconfigured Docker APIs and Next.js",
+        "confidence": "high",
+        "type": "asset",
+        "id": "asset-1"
+      },
+      "position": {
+        "x": 80,
+        "y": 1070
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "asset-2",
+      "type": "asset",
+      "data": {
+        "name": "Next.js Applications",
+        "description": "Next.js web framework deployments targeted by TeamPCP",
+        "source_excerpt": "targeting misconfigured Docker APIs and Next.js",
+        "confidence": "high",
+        "type": "asset",
+        "id": "asset-2"
+      },
+      "position": {
+        "x": 450,
+        "y": 1070
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-2",
+      "type": "action",
+      "data": {
+        "name": "Implant Internal Image",
+        "description": "Compromise of Docker container images",
+        "technique_id": "T1525",
+        "tactic": "Persistence",
+        "source_excerpt": "targeting misconfigured Docker APIs",
+        "confidence": "medium",
+        "type": "action",
+        "id": "action-2"
+      },
+      "position": {
+        "x": 80,
+        "y": 1400
+      },
+      "width": 269,
+      "height": 116,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "or-1",
+      "type": "OR_operator",
+      "data": {
+        "name": "Multiple Attack Outcomes",
+        "description": "TeamPCP conducts various malicious activities after compromise",
+        "source_excerpt": "the group would historically use opportunistic compromises to conduct ransomware, steal data to turn around and sell, and mine cryptocurrency",
+        "confidence": "high",
+        "type": "OR_operator",
+        "id": "or-1"
+      },
+      "position": {
+        "x": 1095,
+        "y": 1070
+      },
+      "width": 240,
+      "height": 44,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-3",
+      "type": "action",
+      "data": {
+        "name": "Data Encrypted for Impact",
+        "description": "Ransomware deployment for financial gain",
+        "technique_id": "T1486",
+        "tactic": "Impact",
+        "source_excerpt": "use opportunistic compromises to conduct ransomware",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-3"
+      },
+      "position": {
+        "x": 587.5,
+        "y": 1400
+      },
+      "width": 278,
+      "height": 137,
+      "dragging": false,
+      "selected": true
+    },
+    {
+      "id": "action-4",
+      "type": "action",
+      "data": {
+        "name": "Exfiltration Over Web Service",
+        "description": "Data theft for resale on underground markets",
+        "technique_id": "T1567",
+        "tactic": "Exfiltration",
+        "source_excerpt": "steal data to turn around and sell",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-4"
+      },
+      "position": {
+        "x": 1280,
+        "y": 1400
+      },
+      "width": 280,
+      "height": 153,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-5",
+      "type": "action",
+      "data": {
+        "name": "Resource Hijacking",
+        "description": "Cryptocurrency mining on compromised systems",
+        "technique_id": "T1496",
+        "tactic": "Impact",
+        "source_excerpt": "mine cryptocurrency",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-5"
+      },
+      "position": {
+        "x": 1650,
+        "y": 1400
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "malware-1",
+      "type": "malware",
+      "data": {
+        "name": "Shai-Hulud Worm",
+        "description": "Self-replicating worm that poisons open source npm packages and propagates through developer supply chains",
+        "source_excerpt": "Starting last summer, the group's Shai-Hulud worm ravaged the open source development ecosystem with its capacity to self-replicate and then poison developers downstream",
+        "confidence": "high",
+        "type": "malware",
+        "id": "malware-1"
+      },
+      "position": {
+        "x": 1990,
+        "y": 410
+      },
+      "width": 280,
+      "height": 151,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-6",
+      "type": "action",
+      "data": {
+        "name": "Supply Chain Compromise",
+        "description": "Poisoning of npm packages to infect downstream developers",
+        "technique_id": "T1195.002",
+        "tactic": "Initial Access",
+        "source_excerpt": "If developers downloaded an open source node package manager (npm) component poisoned with Shai-Hulud, the worm would go on to infect any of the components that those developers contribute",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-6"
+      },
+      "position": {
+        "x": 2390,
+        "y": 740
+      },
+      "width": 280,
+      "height": 153,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "asset-3",
+      "type": "asset",
+      "data": {
+        "name": "npm Packages",
+        "description": "Node package manager components targeted for supply chain poisoning",
+        "source_excerpt": "open source node package manager (npm) component poisoned with Shai-Hulud",
+        "confidence": "high",
+        "type": "asset",
+        "id": "asset-3"
+      },
+      "position": {
+        "x": 2545,
+        "y": 1070
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-7",
+      "type": "action",
+      "data": {
+        "name": "Command and Scripting Interpreter",
+        "description": "Worm self-replication and automated infection of developer contributions",
+        "technique_id": "T1059",
+        "tactic": "Execution",
+        "source_excerpt": "the worm would go on to infect any of the components that those developers contribute, uploading malicious updates to these otherwise legitimate components",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-7"
+      },
+      "position": {
+        "x": 3130,
+        "y": 740
+      },
+      "width": 280,
+      "height": 153,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "malware-2",
+      "type": "malware",
+      "data": {
+        "name": "GlassWorm",
+        "description": "Successor malware to Shai-Hulud deployed by TeamPCP",
+        "source_excerpt": "TeamPCP followed the initial Shai-Hulud with waves of successor attacks, including malware like GlassWorm",
+        "confidence": "high",
+        "type": "malware",
+        "id": "malware-2"
+      },
+      "position": {
+        "x": 510,
+        "y": 410
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "infrastructure-1",
+      "type": "infrastructure",
+      "data": {
+        "name": "TeamPCP C2 Infrastructure",
+        "description": "Command-and-control infrastructure tied to open source Shai-Hulud code",
+        "source_excerpt": "as TeamPCP's command-and-control infrastructure was tied to the open source code",
+        "confidence": "medium",
+        "type": "infrastructure",
+        "id": "infrastructure-1"
+      },
+      "position": {
+        "x": 1465,
+        "y": 740
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-8",
+      "type": "action",
+      "data": {
+        "name": "User Execution: Malicious File",
+        "description": "GitHub employee downloaded poisoned VS Code extension",
+        "technique_id": "T1204.002",
+        "tactic": "Execution",
+        "source_excerpt": "TeamPCP took credit for a compromise against GitHub, where an employee downloaded a poisoned VS Code extension",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-8"
+      },
+      "position": {
+        "x": 2360,
+        "y": 410
+      },
+      "width": 280,
+      "height": 153,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "tool-1",
+      "type": "tool",
+      "data": {
+        "name": "VS Code Extension",
+        "description": "Poisoned Visual Studio Code extension used to compromise GitHub",
+        "source_excerpt": "an employee downloaded a poisoned VS Code extension that resulted in the theft of approximately 4,000 repositories of private code",
+        "confidence": "high",
+        "type": "tool",
+        "id": "tool-1"
+      },
+      "position": {
+        "x": 2020,
+        "y": 740
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "asset-4",
+      "type": "asset",
+      "data": {
+        "name": "GitHub Repositories",
+        "description": "Approximately 4,000 private code repositories stolen from GitHub",
+        "source_excerpt": "resulted in the theft of approximately 4,000 repositories of private code",
+        "confidence": "high",
+        "type": "asset",
+        "id": "asset-4"
+      },
+      "position": {
+        "x": 3500,
+        "y": 1070
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-9",
+      "type": "action",
+      "data": {
+        "name": "Data from Information Repositories",
+        "description": "Theft of private source code repositories",
+        "technique_id": "T1213",
+        "tactic": "Collection",
+        "source_excerpt": "resulted in the theft of approximately 4,000 repositories of private code",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-9"
+      },
+      "position": {
+        "x": 3500,
+        "y": 740
+      },
+      "width": 265,
+      "height": 135,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-10",
+      "type": "action",
+      "data": {
+        "name": "Trusted Relationship",
+        "description": "Exploitation of developer trust in open source packages and extensions",
+        "technique_id": "T1199",
+        "tactic": "Initial Access",
+        "source_excerpt": "TeamPCP has shown how a motivated attacker can move through the tools developers trust every day — open source packages, extensions, accounts, and credentials",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-10"
+      },
+      "position": {
+        "x": 3100,
+        "y": 410
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-11",
+      "type": "action",
+      "data": {
+        "name": "Valid Accounts",
+        "description": "Compromise of developer accounts and credentials",
+        "technique_id": "T1078",
+        "tactic": "Initial Access",
+        "source_excerpt": "move through the tools developers trust every day — open source packages, extensions, accounts, and credentials",
+        "confidence": "medium",
+        "type": "action",
+        "id": "action-11"
+      },
+      "position": {
+        "x": 2760,
+        "y": 740
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-12",
+      "type": "action",
+      "data": {
+        "name": "Phishing",
+        "description": "Social engineering combined with trusted platform abuse",
+        "technique_id": "T1566",
+        "tactic": "Initial Access",
+        "source_excerpt": "TeamPCP appears highly capable of combining social engineering, trusted-platform abuse, and AI-assisted reconnaissance",
+        "confidence": "medium",
+        "type": "action",
+        "id": "action-12"
+      },
+      "position": {
+        "x": 1620,
+        "y": 410
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-13",
+      "type": "action",
+      "data": {
+        "name": "Active Scanning",
+        "description": "AI-assisted reconnaissance to identify targets",
+        "technique_id": "T1595",
+        "tactic": "Reconnaissance",
+        "source_excerpt": "combining social engineering, trusted-platform abuse, and AI-assisted reconnaissance to move faster than traditional security defenses",
+        "confidence": "medium",
+        "type": "action",
+        "id": "action-13"
+      },
+      "position": {
+        "x": 1250,
+        "y": 410
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-14",
+      "type": "action",
+      "data": {
+        "name": "Subvert Trust Controls",
+        "description": "Weaponization of SLSA provenance attestation to bypass supply chain security",
+        "technique_id": "T1553",
+        "tactic": "Defense Evasion",
+        "source_excerpt": "The Mini Shai-Hulud campaigns are among the first worms we've seen actually weaponize SLSA [Supply-Chain Levels for Software Artifacts] provenance attestation",
+        "confidence": "high",
+        "type": "action",
+        "id": "action-14"
+      },
+      "position": {
+        "x": 1620,
+        "y": 80
+      },
+      "width": 280,
+      "height": 133,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "tool-2",
+      "type": "tool",
+      "data": {
+        "name": "SLSA Framework",
+        "description": "Supply-Chain Levels for Software Artifacts security framework weaponized by TeamPCP",
+        "source_excerpt": "weaponize SLSA [Supply-Chain Levels for Software Artifacts, an OpenSSF security framework used to prevent tampering with software builds] provenance attestation",
+        "confidence": "high",
+        "type": "tool",
+        "id": "tool-2"
+      },
+      "position": {
+        "x": 1990,
+        "y": 80
+      },
+      "width": 280,
+      "height": 151,
+      "dragging": false,
+      "selected": false
+    },
+    {
+      "id": "action-15",
+      "type": "action",
+      "data": {
+        "name": "Modify Authentication Process",
+        "description": "Obtaining publishing credentials for popular extensions",
+        "technique_id": "T1556",
+        "tactic": "Credential Access",
+        "source_excerpt": "once you have a publishing credential for a popular extension you've got a direct push channel into every machine running it",
+        "confidence": "medium",
+        "type": "action",
+        "id": "action-15"
+      },
+      "position": {
+        "x": 2360,
+        "y": 80
+      },
+      "width": 280,
+      "height": 153,
+      "dragging": false,
+      "selected": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "source": "actor-1",
+      "target": "vuln-1",
+      "type": "default",
+      "label": "Exploits",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-2",
+      "source": "vuln-1",
+      "target": "action-1",
+      "type": "default",
+      "label": "Enables",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-3",
+      "source": "actor-1",
+      "target": "asset-1",
+      "type": "default",
+      "label": "Targets",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-4",
+      "source": "actor-1",
+      "target": "asset-2",
+      "type": "default",
+      "label": "Targets",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-5",
+      "source": "action-1",
+      "target": "asset-1",
+      "type": "default",
+      "label": "Targets",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-6",
+      "source": "action-1",
+      "target": "asset-2",
+      "type": "default",
+      "label": "Targets",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-7",
+      "source": "asset-1",
+      "target": "action-2",
+      "type": "default",
+      "label": "Enables",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-8",
+      "source": "action-1",
+      "target": "or-1",
+      "type": "default",
+      "label": "Leads to",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-9",
+      "source": "or-1",
+      "target": "action-3",
+      "type": "default",
+      "label": "Option",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-10",
+      "source": "or-1",
+      "target": "action-4",
+      "type": "default",
+      "label": "Option",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-11",
+      "source": "or-1",
+      "target": "action-5",
+      "type": "default",
+      "label": "Option",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-12",
+      "source": "actor-1",
+      "target": "malware-1",
+      "type": "default",
+      "label": "Deploys",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-13",
+      "source": "malware-1",
+      "target": "action-6",
+      "type": "default",
+      "label": "Executes",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-14",
+      "source": "action-6",
+      "target": "asset-3",
+      "type": "default",
+      "label": "Targets",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-15",
+      "source": "malware-1",
+      "target": "action-7",
+      "type": "default",
+      "label": "Uses",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-16",
+      "source": "action-7",
+      "target": "asset-3",
+      "type": "default",
+      "label": "Infects",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-17",
+      "source": "actor-1",
+      "target": "malware-2",
+      "type": "default",
+      "label": "Deploys",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-18",
+      "source": "malware-1",
+      "target": "infrastructure-1",
+      "type": "default",
+      "label": "Communicates with",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-19",
+      "source": "actor-1",
+      "target": "action-8",
+      "type": "default",
+      "label": "Executes",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-20",
+      "source": "action-8",
+      "target": "tool-1",
+      "type": "default",
+      "label": "Uses",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-21",
+      "source": "action-8",
+      "target": "action-9",
+      "type": "default",
+      "label": "Leads to",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-22",
+      "source": "action-9",
+      "target": "asset-4",
+      "type": "default",
+      "label": "Targets",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-23",
+      "source": "actor-1",
+      "target": "action-10",
+      "type": "default",
+      "label": "Executes",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-24",
+      "source": "action-10",
+      "target": "action-11",
+      "type": "default",
+      "label": "Enables",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-25",
+      "source": "actor-1",
+      "target": "action-12",
+      "type": "default",
+      "label": "Uses",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-26",
+      "source": "actor-1",
+      "target": "action-13",
+      "type": "default",
+      "label": "Performs",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-27",
+      "source": "action-13",
+      "target": "action-1",
+      "type": "default",
+      "label": "Leads to",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-28",
+      "source": "malware-1",
+      "target": "action-14",
+      "type": "default",
+      "label": "Uses",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-29",
+      "source": "action-14",
+      "target": "tool-2",
+      "type": "default",
+      "label": "Weaponizes",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-30",
+      "source": "action-15",
+      "target": "action-6",
+      "type": "default",
+      "label": "Enables",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    },
+    {
+      "id": "edge-31",
+      "source": "actor-1",
+      "target": "action-15",
+      "type": "default",
+      "label": "Performs",
+      "style": {
+        "stroke": "rgba(59, 130, 246, 0.8)",
+        "strokeWidth": 2
+      }
+    }
+  ],
+  "metadata": {
+    "createdAt": "2026-05-27T00:05:35.441Z",
+    "updatedAt": "2026-05-27T00:05:35.441Z",
+    "version": "1.0.0",
+    "description": "Exported from FlowViz",
+    "tags": [],
+    "nodeCount": 27,
+    "edgeCount": 31
+  },
+  "visualization": {
+    "viewport": {
+      "x": -508.78619865722635,
+      "y": 194.10554332306484,
+      "zoom": 1.0970451484257255
+    },
+    "storyMode": {
+      "enabled": false
+    }
+  },
+  "analysis": {
+    "extractedTechniques": [],
+    "extractedTactics": []
+  }
+}
